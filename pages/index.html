@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Yayasan Harmoni Pelita Bangsa</title>
+    <meta name="description" content="Yayasan Harmoni Pelita Bangsa - Bersama membangun generasi harmoni melalui program sosial, keagamaan, dan kemanusiaan.">
+    <meta name="keywords" content="Yayasan, Harmoni Pelita Bangsa, Nirlaba, Sosial, Keagamaan, Kemanusiaan, Donasi, Relawan, Pendidikan, Kesehatan, Bogor">
+    <meta name="author" content="Yayasan Harmoni Pelita Bangsa">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-hpb-blue shadow-md py-4 fixed w-full z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center" aria-label="Navigasi Utama">
+            <div class="flex items-center mobile-logo-name">
+                <img src="../assets/images/logo-hpb.png" alt="Logo Yayasan Harmoni Pelita Bangsa" class="h-14 w-14 rounded-full mr-3 shadow-md">
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-hpb-yellow tracking-wide block" aria-current="page">Harmoni Pelita Bangsa</a>
+                    <p class="text-hpb-yellow text-xs md:text-sm mt-0.5 opacity-80 hidden sm:block">Tumbuh Bersama, Terangi Indonesia</p>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center" role="navigation" aria-label="Menu Utama Desktop">
+                <a href="index.html" class="nav-link text-white font-medium transition-colors duration-300" aria-current="page">Beranda</a>
+                <a href="tentangkami.html" class="nav-link text-white font-medium transition-colors duration-300">Tentang Kami</a>
+                <a href="programkami.html" class="nav-link text-white font-medium transition-colors duration-300">Program Kami</a>
+                <a href="galeri.html" class="nav-link text-white font-medium transition-colors duration-300">Galeri</a>
+                <a href="berita.html" class="nav-link text-white font-medium transition-colors duration-300">Berita</a>
+                <a href="kontak.html" class="nav-link text-white font-medium transition-colors duration-300">Kontak</a>
+                <a href="berdonasi.html" class="btn-donate" aria-label="Berdonasi sekarang">Berdonasi</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white hover:text-hpb-yellow focus:outline-none p-2 rounded-md" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="mobileMenuTitle"><title id="mobileMenuTitle">Buka Menu Navigasi</title><path d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-hpb-blue py-2 shadow-md" role="navigation" aria-label="Menu Utama Mobile">
+            <a href="index.html" class="nav-link block px-4 py-2 text-white hover:bg-hpb-yellow hover:text-hpb-blue transition-colors duration-300" aria-current="page">Beranda</a>
+            <a href="tentangkami.html" class="nav-link block px-4 py-2 text-white hover:bg-hpb-yellow hover:text-hpb-blue transition-colors duration-300">Tentang Kami</a>
+            <a href="programkami.html" class="nav-link block px-4 py-2 text-white hover:bg-hpb-yellow hover:text-hpb-blue transition-colors duration-300">Program Kami</a>
+            <a href="galeri.html" class="nav-link block px-4 py-2 text-white hover:bg-hpb-yellow hover:text-hpb-blue transition-colors duration-300">Galeri</a>
+            <a href="berita.html" class="nav-link block px-4 py-2 text-white hover:bg-hpb-yellow hover:text-hpb-blue transition-colors duration-300">Berita</a>
+            <a href="kontak.html" class="nav-link block px-4 py-2 text-white hover:bg-hpb-yellow hover:text-hpb-blue transition-colors duration-300">Kontak</a>
+            <a href="berdonasi.html" class="nav-link block px-4 py-2 text-hpb-yellow font-bold hover:bg-hpb-yellow hover:text-hpb-blue transition-colors duration-300">Berdonasi</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <section id="hero" class="hero-section bg-cover bg-center" style="background-image: url('../assets/images/hero_background.jpg');" aria-labelledby="hero-heading">
+            <div class="hero-overlay"></div>
+            <div class="relative z-10 container mx-auto px-4 py-20">
+                <h1 id="hero-heading" class="text-4xl md:text-6xl font-bold leading-tight mb-4 text-hpb-yellow">Bersama Membangun Generasi Harmoni</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-100">
+                    Yayasan Harmoni Pelita Bangsa berdedikasi untuk menciptakan perubahan positif di masyarakat melalui program-program di bidang Sosial, Keagamaan, dan Kemanusiaan
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="berdonasi.html" class="btn-donate text-lg shadow-premium">Berdonasi Sekarang</a>
+                    <a href="programkami.html" class="bg-transparent border-2 border-white text-white py-3 px-6 rounded-full font-semibold hover:bg-white hover:text-hpb-blue transition-colors duration-300 text-lg shadow-premium">Lihat Program Kami</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white" aria-labelledby="about-short-heading">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <h2 id="about-short-heading" class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Siapa Kami?</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Yayasan Harmoni Pelita Bangsa adalah organisasi nirlaba yang didirikan pada tanggal 22 Mei 2025 di Kota Bogor, berdedikasi untuk menciptakan perubahan positif di masyarakat melalui bidang Sosial, Keagamaan, dan Kemanusiaan.
+                </p>
+                <a href="tentangkami.html" class="text-hpb-red font-semibold hover:underline text-lg">Pelajari Lebih Lanjut Tentang Kami →</a>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-100" aria-labelledby="featured-programs-heading">
+            <div class="container mx-auto px-4">
+                <h2 id="featured-programs-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Fokus Perubahan Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="program-card">
+                        <img src="https://placehold.co/600x400/D1D5DB/374151?text=Pendidikan" alt="Program Pendidikan dan Panti Asuhan" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-hpb-blue">Bidang Sosial</h3>
+                            <p class="text-gray-700 mb-4 text-base">
+                                Meliputi pendirian dan pengelolaan sekolah, pusat kegiatan belajar, kursus, seminar, serta panti asuhan dan panti lansia.
+                            </p>
+                            <a href="programkami.html" class="text-hpb-red font-semibold hover:underline text-base">Detail Program →</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://placehold.co/600x400/D1D5DB/374151?text=Rumah+Al-Quran" alt="Program Rumah Al-Qur'an dan Pondok Pesantren" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-hpb-blue">Bidang Keagamaan</h3>
+                            <p class="text-gray-700 mb-4 text-base">
+                                Peningkatan pendidikan dan pemahaman keagamaan Islam, pendirian tempat ibadah, Rumah Al-Qur'an, dan penyaluran ZISWAF.
+                            </p>
+                            <a href="programkami.html" class="text-hpb-red font-semibold hover:underline text-base">Detail Program →</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://placehold.co/600x400/D1D5DB/374151?text=Bantuan+Bencana" alt="Program Bantuan Kemanusiaan dan Kesehatan" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-hpb-blue">Bidang Kemanusiaan</h3>
+                            <p class="text-gray-700 mb-4 text-base">
+                                Pemberian bantuan kepada korban bencana, yatim piatu, fakir miskin, penyandang disabilitas, serta layanan kesehatan dan pendidikan.
+                            </p>
+                            <a href="programkami.html" class="text-hpb-red font-semibold hover:underline text-base">Detail Program →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-hpb-red text-white" aria-labelledby="impact-heading">
+            <div class="container mx-auto px-4 text-center">
+                <h2 id="impact-heading" class="text-3xl md:text-4xl font-bold mb-10">Dampak yang Telah Kita Ciptakan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-4">
+                        <p class="text-5xl md:text-6xl font-bold mb-2">1000+</p>
+                        <p class="text-lg md:text-xl">Penerima Manfaat</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-5xl md:text-6xl font-bold mb-2">15+</p>
+                        <p class="text-lg md:text-xl">Program Terlaksana</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-5xl md:text-6xl font-bold mb-2">200+</p>
+                        <p class="text-lg md:text-xl">Relawan Aktif</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-200" aria-labelledby="cta-secondary-heading">
+            <div class="container mx-auto px-4 text-center">
+                <h2 id="cta-secondary-heading" class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Bagaimana Anda Bisa Terlibat?</h2>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="kontak.html" class="bg-hpb-red text-white py-3 px-8 rounded-full font-semibold hover:bg-red-700 transition-colors duration-300 text-lg shadow-premium">Jadilah Relawan</a>
+                    <a href="berita.html" class="bg-white border-2 border-hpb-red text-hpb-red py-3 px-8 rounded-full font-semibold hover:bg-hpb-red hover:text-white transition-colors duration-300 text-lg shadow-premium">Baca Berita Terbaru</a>
+                    <a href="galeri.html" class="bg-white border-2 border-hpb-red text-hpb-red py-3 px-8 rounded-full font-semibold hover:bg-hpb-red hover:text-white transition-colors duration-300 text-lg shadow-premium">Lihat Galeri Kami</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-hpb.png" alt="Logo Harmoni Pelita Bangsa" class="h-14 w-14 rounded-full mr-3 shadow-md">
+                        <h3 class="text-xl font-bold text-hpb-yellow">Harmoni Pelita Bangsa</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Mewujudkan masa depan yang lebih baik melalui pendidikan, kesehatan, dan pemberdayaan komunitas.
+                    </p>
+                </div>
+
+                <div role="navigation" aria-label="Tautan Cepat Footer">
+                    <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors duration-300">Beranda</a></li>
+                        <li><a href="tentangkami.html" class="hover:text-white transition-colors duration-300">Tentang Kami</a></li>
+                        <li><a href="programkami.html" class="hover:text-white transition-colors duration-300">Program Kami</a></li>
+                        <li><a href="galeri.html" class="hover:text-white transition-colors duration-300">Galeri</a></li>
+                        <li><a href="berita.html" class="hover:text-white transition-colors duration-300">Berita</a></li>
+                        <li><a href="kontak.html" class="hover:text-white transition-colors duration-300">Kontak</a></li>
+                        <li><a href="berdonasi.html" class="hover:text-white transition-colors duration-300">Berdonasi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <p class="text-gray-400 mb-2">Sekertariat : Jl. Pahlawan II, Kp. Sindang Resmi RT. 04 RW. 08 No. 18 Kelurahan Bondongan Kecamatan Bogor Selatan 16131</p>
+                    <p class="text-gray-400 mb-2">Email: harmonipelitabangsa@gmail.com</p>
+                    <p class="text-gray-400 mb-4">Telepon: (0251) 12345678</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Kunjungi kami di Facebook">
+                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><title>Facebook Yayasan Harmoni Pelita Bangsa</title><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.812c-3.272 0-4.188 1.561-4.188 4.096v2.904z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Kunjungi kami di Instagram">
+                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><title>Instagram Yayasan Harmoni Pelita Bangsa</title><path d="M12 2c2.716 0 3.056.01 4.122.06 1.07.05 1.79.21 2.428.468.65.27 1.18.618 1.62.958.44.34.78.78 1.05 1.42.258.63.418 1.35.468 2.428.05 1.066.06 1.406.06 4.122s-.01 3.056-.06 4.122c-.05 1.07-.21 1.79-.468 2.428-.27.65-.618 1.18-.958 1.62-.34.44-.78-.78-1.42-1.05-.63.258-1.35.418-2.428.468-1.066.05-1.406.06-4.122.06s-3.056-.01-4.122-.06c-1.07-.05-1.79-.21-2.428-.468-.65-.27-1.18-.618-1.62-.958-.34-.44-.78-.78-1.05-1.42-.258-.63-.418-1.35-.468-2.428-.05-1.066-.06-1.406-.06-4.122s.01-3.056.06-4.122c.05-1.07.21-1.79.468-2.428.27-.65.618-1.18.958-1.62.34-.44.78-.78 1.42-1.05.63-.258 1.35-.418 2.428-.468C8.944 2.01 9.284 2 12 2zM12 7.21c-2.86 0-5.18 2.32-5.18 5.18s2.32 5.18 5.18 5.18 5.18-2.32 5.18-5.18-2.32-5.18-5.18-5.18zm0 8.515c-1.84 0-3.335-1.495-3.335-3.335S10.16 8.71 12 8.71s3.335 1.495 3.335 3.335-1.495 3.335-3.335 3.335z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Kunjungi kami di YouTube">
+                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><title>YouTube Yayasan Harmoni Pelita Bangsa</title><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18v-12l9 6-9 6z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+                © 2025 Harmoni Pelita Bangsa. Semua Hak Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Toggle mobile menu
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Highlight active navigation link
+            // Mengambil hanya nama file dari path URL dan atribut href
+            const currentPage = window.location.pathname.split('/').pop(); 
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href').split('/').pop(); 
+                if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
