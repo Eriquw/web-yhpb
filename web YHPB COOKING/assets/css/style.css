@@ -1,0 +1,279 @@
+/* style.css */
+
+/* Mengatur font-family global ke Inter */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling untuk navigasi antar section */
+}
+
+/* Konfigurasi Tailwind CSS untuk warna kustom dari logo (didefinisikan ulang untuk konsistensi) */
+:root {
+    --hpb-blue: #004080; /* Biru tua dari logo */
+    --hpb-yellow: #FFD700; /* Kuning keemasan dari logo */
+    --hpb-green: #4CAF50; /* Hijau daun dari logo */
+    --hpb-light-blue: #0080FF; /* Biru muda dari logo (bagian tangan) */
+    --hpb-red: #EF4444; /* Merah untuk tombol donasi (warna fungsional, tidak dari logo) */
+    --gray-900: #1a202c; /* Warna abu-abu gelap untuk teks utama dan elemen gelap (netral) */
+    --gray-50: #f9fafb; /* Warna abu-abu terang untuk latar belakang dan elemen terang (netral) */
+}
+
+/* Menggunakan variabel CSS untuk konsistensi */
+.bg-hpb-blue { background-color: var(--hpb-blue); }
+.text-hpb-blue { color: var(--hpb-blue); }
+.bg-hpb-yellow { background-color: var(--hpb-yellow); }
+.text-hpb-yellow { color: var(--hpb-yellow); }
+.bg-hpb-green { background-color: var(--hpb-green); }
+.text-hpb-green { color: var(--hpb-green); }
+.bg-hpb-light-blue { background-color: var(--hpb-light-blue); }
+.text-hpb-light-blue { color: var(--hpb-light-blue); }
+.bg-hpb-red { background-color: var(--hpb-red); }
+.text-hpb-red { color: var(--hpb-red); }
+.border-hpb-red { border-color: var(--hpb-red); }
+.bg-gray-50 { background-color: var(--gray-50); }
+.text-gray-800 { color: #2d3748; }
+.text-gray-900 { color: var(--gray-900); }
+
+
+/* Styling khusus untuk tombol donasi agar lebih menonjol */
+.btn-donate {
+    background-color: var(--hpb-red);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; /* Bentuk pil */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi lebih halus */
+}
+.btn-donate:hover {
+    background-color: #DC2626; /* Warna merah lebih gelap saat hover */
+    transform: translateY(-2px); /* Efek naik sedikit saat hover */
+}
+
+/* Styling untuk section hero agar gambar latar belakang menutupi seluruh area */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh; /* Tinggi minimum untuk hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Warna teks putih agar kontras dengan gambar latar */
+    position: relative;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Overlay sedikit lebih gelap untuk kontras teks yang lebih baik */
+}
+
+/* Styling untuk card program dan person */
+.program-card, .person-card {
+    background-color: white;
+    border-radius: 0.75rem; /* Sudut membulat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Bayangan lebih jelas */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.program-card:hover, .person-card:hover {
+    transform: translateY(-5px); /* Efek naik saat hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+}
+
+/* Styling untuk link navigasi aktif */
+.nav-link.active {
+    font-weight: 700; /* Lebih tebal */
+    color: var(--hpb-yellow); /* Warna kuning untuk highlight */
+    border-bottom: 2px solid var(--hpb-yellow); /* Garis bawah */
+    padding-bottom: 4px; /* Sedikit padding agar tidak menempel */
+}
+/* Efek hover untuk link navigasi */
+.nav-link:hover {
+    color: var(--hpb-yellow);
+    transition: color 0.3s ease;
+}
+
+/* Custom styling for organizational roles for better visual separation (tentangkami.html) */
+.role-section {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2.5rem; /* mb-10 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* subtle shadow */
+    background-color: white; /* Default background untuk semua role section */
+}
+/* Variasi warna latar belakang untuk setiap jenis peran agar lebih visual */
+.role-section.pembina-bg { background-color: #E0F2F7; /* light blue */ }
+.role-section.pengurus-bg { background-color: #E6F7E0; /* light green */ }
+.role-section.pengawas-bg { background-color: #FFFBE0; /* light yellow */ }
+
+.role-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1.5rem; /* mb-6 */
+    color: var(--hpb-blue);
+    text-align: center;
+}
+.role-grid {
+    display: grid;
+    gap: 1.5rem; /* gap-6 */
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Default 1 column */
+}
+@media (min-width: 768px) { /* md breakpoint */
+    .role-grid.md-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .role-grid.md-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) { /* lg breakpoint */
+    .role-grid.lg-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Styling untuk card gambar galeri (galeri.html) */
+.gallery-item {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk card berita (berita.html) */
+.news-article {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.news-article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Perbaikan Tampilan Mobile Desktop Mode --- */
+@media (max-width: 768px) { /* Menerapkan pada layar kecil (umum untuk HP) */
+    .mobile-logo-name {
+        display: flex;
+        flex-direction: column; /* Mengubah arah flex menjadi kolom untuk menumpuk nama dan moto */
+        align-items: flex-start; /* Sejajarkan ke kiri */
+        white-space: normal; /* Izinkan teks untuk wrap */
+        overflow: visible; /* Izinkan konten terlihat sepenuhnya */
+        text-overflow: clip; /* Nonaktifkan elipsis untuk mode ini */
+        max-width: calc(100% - 80px); /* Berikan ruang untuk tombol hamburger */
+        margin-left: 0; /* Pastikan rata kiri */
+    }
+    .mobile-logo-name img {
+        margin-right: 0; /* Hapus margin kanan jika menumpuk */
+        margin-bottom: 0.25rem; /* Sedikit jarak antara logo dan teks */
+    }
+    .mobile-logo-name a {
+        font-size: 1.1rem; /* Ukuran font yang sedikit lebih kecil agar pas */
+        line-height: 1.2; /* Mengurangi spasi baris jika ada dua baris */
+        white-space: normal; /* Izinkan nama yayasan untuk wrap jika terlalu panjang */
+    }
+    .mobile-logo-name p { /* Ukuran font untuk moto */
+        font-size: 0.75rem; /* Sedikit lebih besar dari sebelumnya, agar lebih terbaca */
+        line-height: 1.2;
+        opacity: 0.9; /* Tingkatkan opasitas */
+        white-space: normal; /* Izinkan moto untuk wrap */
+    }
+    /* Sesuaikan tinggi header jika diperlukan untuk mengakomodasi dua baris teks */
+    header {
+        padding-top: 0.5rem; /* Kurangi padding atas/bawah header */
+        padding-bottom: 0.5rem;
+    }
+    nav .container {
+        height: auto; /* Izinkan tinggi nav menyesuaikan konten */
+        align-items: center; /* Pastikan item di nav sejajar tengah jika flex-direction: column */
+    }
+    /* Menyesuaikan padding pada nav-link di menu mobile */
+    .md\:hidden .nav-link {
+        padding-left: 1rem; /* padding standar untuk item menu mobile */
+        padding-right: 1rem;
+    }
+}
+/* --- Akhir Perbaikan Tampilan Mobile Desktop Mode --- */
+
+/* CSS tambahan untuk slider di artikel_idul_adha_1445h.html */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.75rem; /* Sesuai dengan rounded-lg di HTML */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sesuai dengan shadow-md di HTML */
+}
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slider-wrapper img {
+    width: 100%;
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+    object-fit: cover; /* Memastikan gambar menutupi area */
+    /* Remove rounded-lg here if it's applied to the container, to avoid double rounding */
+    /* If you want individual image rounding, keep it in HTML and remove from container */
+    height: 400px; /* Tinggi tetap untuk konsistensi, sesuaikan jika perlu */
+}
+@media (min-width: 768px) {
+    .slider-wrapper img {
+        height: 500px; /* Tinggi lebih besar di desktop */
+    }
+}
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem; /* Ukuran panah */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem; /* Ukuran tombol */
+    height: 3rem;
+}
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.slider-button-prev {
+    left: 1rem;
+}
+.slider-button-next {
+    right: 1rem;
+}
+.slider-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+.dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+    background-color: white;
+}
